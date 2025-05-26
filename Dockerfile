@@ -7,7 +7,7 @@ COPY pom.xml .
 
 COPY src ./src
 
-run mvn clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 WORKDIR /usr/local/tomcat/webapps/
 
