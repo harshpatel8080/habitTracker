@@ -11,7 +11,7 @@ RUN mvn clean package -DskipTests
 
 WORKDIR /usr/local/tomcat/webapps/
 
-COPY /app/target/*.war app.war
+COPY /app/target/HabitTracker-0.0.1-SNAPSHOT.war app.war
 
 
 # Stage 2: Run with OpenJDK
