@@ -11,7 +11,7 @@ FROM tomcat:9.0-jdk17-corretto
 WORKDIR /usr/local/tomcat/webapps/
 COPY --from=build /app/target/HabitTracker-0.0.1-SNAPSHOT.war app.war
 
-EXPOSE 8080
+EXPOSE 9999
 
 ENTRYPOINT ["java","-jar","app.war"]
 
