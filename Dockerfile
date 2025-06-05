@@ -9,11 +9,11 @@ RUN mvn clean package -DskipTests
 # Stage 2: Deploy WAR to Tomcat
 FROM tomcat:9.0-jdk17-corretto
 WORKDIR /usr/local/tomcat/webapps/
-COPY --from=build /app/target/HabitTracker-0.0.1-SNAPSHOT.war app.war
+COPY --from=build /app/target/HabitTracker-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 9999
 
-ENTRYPOINT ["java","-jar","app.war"]
+ENTRYPOINT ["java","-jar","app.jar"]
 
 # FROM maven:3.9.6-eclipse-temurin-17 AS build
 # # Set the working directory inside the container
